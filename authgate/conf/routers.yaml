@@ -1,0 +1,23 @@
+http:
+  routers:
+    admin:
+      entryPoints:
+        - admin
+      rule: PathPrefix(`/`)
+      service: api@internal
+      middlewares:
+        - auth
+    authe:
+      entryPoints:
+        - http
+      rule: PathPrefix(`/authe`)
+      service: authe
+      middlewares:
+        - strip
+    autho:
+      entryPoints:
+        - http
+      rule: PathPrefix(`/autho`)
+      service: autho
+      middlewares:
+        - strip
