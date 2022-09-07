@@ -6,6 +6,11 @@ http:
         authResponseHeaders:
           - "X-Id-Token"
           - "Authorization"
+    ui-redirect:
+      redirectRegex:
+        regex: "https?://(.*)/ui(.*)"
+        replacement: "{{ env "AUTHGATE_WEBAUTH_PUBLIC_URL" | default "http://localhost:21000" }}$2"
+        permanent: true
     strip:
       stripPrefix:
         prefixes:

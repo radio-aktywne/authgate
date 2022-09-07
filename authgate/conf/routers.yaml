@@ -8,6 +8,13 @@ http:
       priority: 1
       middlewares:
         - auth
+    ui:
+      entryPoints:
+          - http
+      rule: PathPrefix(`/ui`)
+      service: noop@internal
+      middlewares:
+          - ui-redirect
     authe:
       entryPoints:
         - http
