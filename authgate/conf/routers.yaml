@@ -3,7 +3,7 @@ http:
     api:
       entryPoints:
         - http
-      rule: PathPrefix(`/`)
+      rule: Path(`/`) || PathPrefix(`/api`) || PathPrefix(`/dashboard`)
       service: api@internal
       priority: 1
       middlewares:
