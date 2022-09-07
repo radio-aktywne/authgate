@@ -4,8 +4,6 @@ cat <<EOF >./traefik.yml
 entryPoints:
   http:
     address: ":${AUTHGATE_PORT:-20000}"
-  admin:
-    address: ":${AUTHGATE_ADMIN_PORT:-20001}"
 
 api:
   dashboard: true

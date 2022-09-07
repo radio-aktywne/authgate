@@ -10,12 +10,11 @@ RUN chmod +x ./start.sh
 COPY ./authgate/conf/ ./conf/
 
 ENV AUTHGATE_PORT=20000 \
-    AUTHGATE_ADMIN_PORT=20001 \
+    AUTHGATE_WEBAUTH_PUBLIC_URL=http://localhost:21000 \
     AUTHGATE_AUTHE_URL=http://localhost:23000 \
     AUTHGATE_AUTHO_URL=http://localhost:24000
 
 EXPOSE 20000
-EXPOSE 20001
 
 ENTRYPOINT ["./start.sh"]
 CMD []

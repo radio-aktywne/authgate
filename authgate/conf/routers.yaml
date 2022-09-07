@@ -1,10 +1,11 @@
 http:
   routers:
-    admin:
+    api:
       entryPoints:
-        - admin
+        - http
       rule: PathPrefix(`/`)
       service: api@internal
+      priority: 1
       middlewares:
         - auth
     authe:
