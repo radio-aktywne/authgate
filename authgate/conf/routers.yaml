@@ -2,7 +2,7 @@ http:
   routers:
     api:
       entryPoints:
-        - http
+        - https
       rule: Path(`/`) || PathPrefix(`/api`) || PathPrefix(`/dashboard`)
       service: api@internal
       priority: 1
@@ -10,21 +10,21 @@ http:
         - auth
     ui:
       entryPoints:
-          - http
+          - https
       rule: PathPrefix(`/ui`)
       service: noop@internal
       middlewares:
           - ui-redirect
     authe:
       entryPoints:
-        - http
+        - https
       rule: PathPrefix(`/authe`)
       service: authe
       middlewares:
         - strip
     autho:
       entryPoints:
-        - http
+        - https
       rule: PathPrefix(`/autho`)
       service: autho
       middlewares:

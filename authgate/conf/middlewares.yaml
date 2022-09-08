@@ -2,7 +2,7 @@ http:
   middlewares:
     auth:
       forwardAuth:
-        address: "{{ env "AUTHGATE_AUTHO_URL" | default "http://localhost:24000" }}/decisions"
+        address: "{{ env "AUTHGATE_AUTHO_URL" | default "https://localhost:24000" }}/decisions"
         trustForwardHeader: true
         authResponseHeaders:
           - "X-Id-Token"

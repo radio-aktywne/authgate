@@ -1,0 +1,6 @@
+http:
+  serversTransports:
+    authe:
+      serverName: authe
+    autho:
+      serverName: autho
