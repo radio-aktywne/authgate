@@ -2,9 +2,11 @@ http:
   services:
     authe:
       loadBalancer:
+        serversTransport: authe
         servers:
-          - url: "{{ env "AUTHGATE_AUTHE_URL" | default "http://localhost:23000" }}"
+          - url: "{{ env "AUTHGATE_AUTHE_URL" | default "https://localhost:23000" }}"
     autho:
       loadBalancer:
+        serversTransport: autho
         servers:
-          - url: "{{ env "AUTHGATE_AUTHO_URL" | default "http://localhost:24000" }}"
+          - url: "{{ env "AUTHGATE_AUTHO_URL" | default "https://localhost:24000" }}"
