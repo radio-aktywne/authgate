@@ -4,8 +4,8 @@
 
 auth gateway ⛩️
 
-[![Testing docker build](https://github.com/radio-aktywne/authgate/actions/workflows/docker-build.yml/badge.svg)](https://github.com/radio-aktywne/authgate/actions/workflows/docker-build.yml)
-[![Deploying docs](https://github.com/radio-aktywne/authgate/actions/workflows/docs.yml/badge.svg)](https://github.com/radio-aktywne/authgate/actions/workflows/docs.yml)
+[![Build](https://github.com/radio-aktywne/authgate/actions/workflows/build.yaml/badge.svg)](https://github.com/radio-aktywne/authgate/actions/workflows/build.yaml)
+[![Docs](https://github.com/radio-aktywne/authgate/actions/workflows/docs.yaml/badge.svg)](https://github.com/radio-aktywne/authgate/actions/workflows/docs.yaml)
 
 </div>
 
@@ -13,7 +13,9 @@ auth gateway ⛩️
 
 This `README` provides info about the development process.
 
-For more info about `authgate` itself see `authgate/README.md` or [docs](https://radio-aktywne.github.io/authgate).
+For more info about `authgate` itself see
+[package `README`](authgate/README.md) or
+[docs](https://radio-aktywne.github.io/authgate).
 
 ## Quickstart
 
